@@ -21,23 +21,19 @@ div.center_container {
     min-height: 100vh;
 }
 
-
 @keyframes flicker {
     to {
         box-shadow: none;
     }
 }
 
-
 div.social_container {
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
-
     box-shadow: 0px 0px 10px 15px rgb(229, 229, 231);
     animation: flicker 1s steps(2, start) infinite;
-
 }
 
 img.social_icon {
@@ -48,7 +44,9 @@ img.social_icon {
 }
 
 ::selection {
-    cursor: default;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none !important;
