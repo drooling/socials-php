@@ -2,12 +2,14 @@
 Uncomment other shit for a flickering red glow around socials box
 */
 
+
 body {
     background-image: url("../assets/background.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    background-color: black;
     overflow: hidden;
 }
 
