@@ -4,7 +4,7 @@ Uncomment other shit for a flickering red glow around socials box
 
 
 body {
-    background-image: url("../assets/background.gif");
+    background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -26,32 +26,34 @@ div.center_container {
     min-height: 100vh;
 }
 
-/*
+
 @keyframes flicker {
     to {
         box-shadow: none;
     }
 }
-*/
+
 
 div.social_container {
     display: flex;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
-    /*
-    box-shadow: 0px 0px 10px 10px red;
+
+    box-shadow: 0px 0px 10px 15px rgb(229, 229, 231);
     animation: flicker 1s steps(2, start) infinite;
-    */
+
 }
 
 img.social_icon {
+    -moz-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; 
-    margin: 25px;
-    max-height: 75px;
+    margin: 20px;
+    max-height: 65px;
 }
 
 ::selection {
+    -moz-user-select: none !important;
     user-select: none !important;
 }
 
