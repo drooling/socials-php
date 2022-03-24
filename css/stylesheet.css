@@ -43,6 +43,10 @@ img.social_icon {
     max-height: 75px;
 }
 
+::selection {
+    user-select: none !important;
+}
+
 a:hover {
     transform: scale(1.1);
 }
