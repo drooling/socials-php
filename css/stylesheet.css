@@ -1,3 +1,9 @@
+iframe {                
+    width: 100%;
+    border: none;
+    height: 100vh;
+}
+
 div.interact {
     background-color: black;
     top: 0; bottom: 0; left: 0; right: 0;
