@@ -1,3 +1,19 @@
+div.interact {
+    background-color: black;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    color: crimson;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: monospace;
+    position: absolute;
+}
+
 body {
     background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
