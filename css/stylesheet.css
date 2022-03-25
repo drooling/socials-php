@@ -17,7 +17,7 @@ div.interact {
     font-weight: bolder;
     font-size: 30px;
     font-family: monospace;
-    position: absolute;
+    position: fixed;
 }
 
 body {
