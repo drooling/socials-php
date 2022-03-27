@@ -13,7 +13,8 @@
 	</head>
 	<script>
 		function init_music() {
-			document.body.removeChild(document.getElementById("force-interaction"));
+			document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]);
+			document.getElementById("force-interaction").style.animation = "fadeout 1s normal forwards ease";
             document.getElementById("background_audio").play();
         }
 	</script>
