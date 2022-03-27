@@ -12,17 +12,17 @@
 		<link href="./css/stylesheet.css" rel="stylesheet">
 	</head>
 	<script>
-		function init_music() {
-			document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]);
-			document.getElementById("force-interaction").style.animation = "fadeout 1s normal forwards ease";
-            document.getElementById("background_audio").play();
+		function init() {
+			document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
+			document.getElementById("force-interaction").style.animation = "fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
+            document.getElementById("background-audio").play(); // Start audio
         }
 	</script>
 	<body>
-		<noscript>
+		<noscript> <!-- Can't force interaction without javascript -->
 			<iframe src="./nojs/index.html"></iframe>
 		</noscript>
-		<div onclick="init_music();" class="interact" id="force-interaction">
+		<div onclick="javascript:init();" class="interact" id="force-interaction"> <!-- Force interaction with webpage to start music without permission -->
 			<p>Click here to enter ;)</p>
 		</div>
 		<div class="center_container">
@@ -33,11 +33,6 @@
 				<a href="https://www.instagram.com/surtains/" target="_blank" rel="noopener noreferrer">
 					<img class="social_icon" src="./assets/instagram.png"/>
 				</a>
-				<!--
-				<a href="https://tiktok.com/@surtains/" target="_blank" rel="noopener noreferrer">
-					<img class="social_icon" src="./assets/tiktok.png"/>
-				</a>
-				-->
 				<a href="https://github.com/9sv/" target="_blank" rel="noopener noreferrer">
 					<img class="social_icon" src="./assets/github.png"/>
 				</a>
@@ -46,7 +41,7 @@
 				</a>
 			</div>
 		</div>
-		<audio loop preload="auto" id="background_audio">
+		<audio loop preload="auto" id="background-audio"> <!-- Preload audio to play after interaction -->
 			<source src="./assets/background.mp3" type="audio/mp3">
 		</audio>
 	</body>
