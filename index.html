@@ -15,7 +15,10 @@
 		function init() {
 			document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
 			document.getElementById("force-interaction").style.animation = "fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
-            document.getElementById("background-audio").play(); // Start audio
+            let audio = document.getElementById("background-audio");
+			audio.volume = 0.3; // change vol
+			audio.play(); // Play bakcground audio
+
         }
 	</script>
 	<body>
