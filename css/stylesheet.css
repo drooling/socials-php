@@ -18,6 +18,7 @@ div.interact {
     display: flex;
     font-family: Arial, sans-serif; 
     font-size: 30px;
+    text-decoration-style: bold;
     position: fixed;
     overflow: hidden;
 }
