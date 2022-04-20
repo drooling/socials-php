@@ -16,7 +16,7 @@ div.interact {
     align-items: center;
     justify-content: center;
     display: flex;
-    font-family: Arial Black, sans-serif; 
+    font-family: Arial, sans-serif; 
     font-size: 30px;
     position: fixed;
     overflow: hidden;
