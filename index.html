@@ -21,10 +21,10 @@
 
         }
 	</script>
+	<noscript> <!-- Can't force interaction without javascript -->
+		<iframe src="./nojs/index.html"></iframe>
+	</noscript>
 	<body>
-		<noscript> <!-- Can't force interaction without javascript -->
-			<iframe src="./nojs/index.html"></iframe>
-		</noscript>
 		<div onclick="javascript:init();" class="interact" id="force-interaction"> <!-- Force interaction with webpage to start music without permission -->
 			<h3>Click here to enter ;)</h3>
 		</div>
