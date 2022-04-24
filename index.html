@@ -11,20 +11,20 @@
 		<meta property="og:description" content="hey lol">
 		<link href="./css/stylesheet.css" rel="stylesheet">
 	</head>
-	<script>
-		function init() {
-			document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
-			document.getElementById("force-interaction").style.animation = "fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
-            let audio = document.getElementById("background-audio");
-			audio.volume = 0.3; // change vol
-			audio.play(); // Play background audio
-
-        }
-	</script>
-	<noscript> <!-- Can't force interaction without javascript -->
-		<p>Please enable JavaScript and reload the page. -surt</p>
-	</noscript>
 	<body>
+		<script>
+			function init() {
+				document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
+				document.getElementById("force-interaction").style.animation = "fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
+				let audio = document.getElementById("background-audio");
+				audio.volume = 0.3; // change vol
+				audio.play(); // Play background audio
+
+        	}
+		</script>
+		<noscript> <!-- Can't force interaction without javascript -->
+			<p>Please enable JavaScript and reload the page. -surt</p>
+		</noscript>
 		<div onclick="javascript:init();" class="interact" id="force-interaction"> <!-- Force interaction with webpage to start music without permission -->
 			<h3>Click here to enter ;)</h3>
 		</div>
