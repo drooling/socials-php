@@ -8,7 +8,10 @@
 
 div.interact {
     background-color: black;
-    top: 0; bottom: 0; left: 0; right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 100%;
     width: 100%;
     background-position: center center;
@@ -16,7 +19,7 @@ div.interact {
     align-items: center;
     justify-content: center;
     display: flex;
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
     font-size: 30px;
     text-decoration-style: bold;
     position: fixed;
@@ -55,7 +58,8 @@ div.center_container {
 div.social_container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
+
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     box-shadow: 0px 0px 10px 15px rgb(229, 229, 231);
@@ -63,8 +67,9 @@ div.social_container {
 }
 
 img.social_icon {
+    -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; 
+    transition: all 1s ease-in-out;
     margin: 20px;
     max-height: 65px;
 }
@@ -82,8 +87,14 @@ a:hover {
     transform: scale(1.1);
 }
 
+@media (prefers-color-scheme: dark) {
+    div.social_container {
+        box-shadow: 0px 0px 10px 15px black;
+    }
+}
+
 @media (max-width: 800px) {
     div.social_container {
         flex-direction: column;
     }
-  }
+}
