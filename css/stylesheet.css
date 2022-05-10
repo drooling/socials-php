@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
 @keyframes fadeout {
     to {
         opacity: 0;
@@ -19,7 +21,7 @@ div.interact {
     align-items: center;
     justify-content: center;
     display: flex;
-    font-family: Arial, sans-serif;
+    font-family: 'Oleo Script', cursive;
     font-size: 30px;
     text-decoration-style: bold;
     position: fixed;
