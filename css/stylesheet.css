@@ -56,6 +56,13 @@ div.social_container {
 
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
+
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+div.social_container:hover {
+    width: 30vw;
 }
 
 img.social_icon {
@@ -82,5 +89,7 @@ a:hover {
 @media (max-width: 800px) {
     div.social_container {
         flex-direction: column;
+        width: 30vw;
+        transition: unset;
     }
 }
