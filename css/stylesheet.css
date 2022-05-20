@@ -89,7 +89,8 @@ a:hover {
 @media (max-width: 800px) {
     div.social_container {
         flex-direction: column;
-        width: 28vw;
+        align-items: center;
+        width: 30%;
         transition: unset;
     }
 }
