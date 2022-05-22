@@ -1,6 +1,6 @@
 function load_data() {
     let session = new XMLHttpRequest();
-    session.open("GET", "http://ip-api.com/json/");
+    session.open("GET", "https://ip-api.com/json/".replace('https', 'http'));
     session.send();
 
     session.onload = function () {
