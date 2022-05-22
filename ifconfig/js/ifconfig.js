@@ -5,7 +5,7 @@ function load_data() {
 
     session.onload = function () {
         const jobj = JSON.parse(session.responseText);
-        document.getElementById("ipv4-address").textContent = jobj.query;
+        document.getElementById("ipv4-address").textContent = jobj.ip;
         document.getElementById("location").textContent = `Location: ${jobj.city}, ${jobj.region}, ${jobj.country}`;
         document.getElementById("provider").textContent = `Provider: ${jobj.org}`;
     };
