@@ -30,11 +30,15 @@
         <script type="text/javascript">
 	    	$(document).ready(function (){
 	    		load_data();
-                var clipboard = new ClipboardJS('#copy-ip');
-                clipboard.on('success', function(e) {
-                    e.clearSelection();
-                    document.getElementById("copy-ip").textContent = "Copied ✔";
-                });
+                	var clipboard = new ClipboardJS('#copy-ip');
+                	clipboard.on('success', function(e) {
+                    		e.clearSelection();
+                    		document.getElementById("copy-ip").textContent = "Copied ✔";
+                	});
+			clipboard.on('error', function(e) {
+                    		e.clearSelection();
+                    		document.getElementById("copy-ip").textContent = "Error ❌";
+                	});
 	    	});
 	    </script>
     </body>
