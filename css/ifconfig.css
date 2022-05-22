@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+    --rich-black: #0a0a0aff;
+    --persian-red: #d1342fff;
+    --dutch-white: #eee3c1ff;
+}
+
+body {
+    background-color: var(--rich-black);
+    overflow: hidden;
+}
+
+div.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.address {
+    text-align: center;
+    color: var(--persian-red);
+    font-family: 'Righteous', cursive;
+}
+
+div.details {
+    text-align: center;
+    color: var(--dutch-white);
+    font-family: 'Abel', sans-serif;
+    clear: auto;
+}
+
+h1#ipv4-address {
+    text-decoration: underline;
+    text-decoration-color: var(--dutch-white);
+    text-decoration-thickness: 3px;
+}
+
+h1 {
+    font-size: 6vw;
+}
+
+h2 {
+    font-size: 2vw;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+button#copy-ip {
+    background-color: transparent;
+    color: var(--dutch-white);
+    font-family: 'Abel', sans-serif;
+    border-color: var(--persian-red);
+    border-width: 2px;
+    padding: 10px 25px;
+}

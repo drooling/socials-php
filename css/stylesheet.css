@@ -90,7 +90,7 @@ a:hover {
     div.social_container {
         flex-direction: column;
         align-items: center;
-        width: 30%;
+        width: 30vw;
         transition: unset;
     }
 }
