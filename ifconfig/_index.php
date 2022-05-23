@@ -1,8 +1,10 @@
 <?php
-$resp = file_get_contents("https://api.techniknews.net/ipgeo/");
+
+$ip = $_SERVER['REMOTE_ADDR'];
+
+$resp = file_get_contents("https://api.techniknews.net/ipgeo/" . $ip);
 $parser = json_decode($resp);
 
-$ip = $parser->ip;
 $location = "Location: " . $parser->city . ', ' . $parser->regionName . ', ' . $parser->country;
 $provider = "Provider: " . $parser->isp;
 ?>
