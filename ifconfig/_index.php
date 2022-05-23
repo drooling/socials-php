@@ -22,11 +22,11 @@ $provider = "Provider: " . $parser->isp;
             <div>
                 <div class="address">
                     <h2>Your IP address is</h2>
-                    <h1 id="ipv4-address"><?php echo $ip ?></h1>
+                    <h1 id="ipv4-address"><p><?=$ip?></p></h1>
                 </div>
                 <div class="details">
-                    <h3 id="location"><?php echo $location ?></h3>
-                    <h3 id="provider"><?php echo $provider ?></h3>
+                    <h3 id="location"><p><?=$location?></p></h3>
+                    <h3 id="provider"><p><?=$provider?></p></h3>
                 </div>
                 <div>
                     <center>
