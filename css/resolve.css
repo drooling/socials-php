@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+:root {
+    --rich-black: #0a0a0aff;
+    --persian-red: #d1342fff;
+    --dutch-white: #eee3c1ff;
+}
+
+body {
+    background-color: var(--rich-black);
+    overflow: hidden;
+}
+
+div.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    border: 1px solid var(--dutch-white);
+    border-radius: 15px;
+    padding: 15vh 15vw;
+}
+
+input[type=text] {
+    background-color: transparent;
+    color: var(--persian-red);
+    border: 1px solid var(--dutch-white);
+    border-radius: 5px;
+    padding: 20px 20px;
+    width: 80%;
+    margin-bottom: 25px;
+}
+
+button[type=submit] {
+    background-color: transparent;
+    color: var(--persian-red);
+    border: 1px solid var(--dutch-white);
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 50%;
+}
+
+h2.success {
+    color: lime;
+    margin-bottom: 2vh;
+}
+
+h2.err {
+    color: red;
+    margin-bottom: 2vh;
+}
