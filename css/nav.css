@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+    --persian-red: #d1342fff;
+    --dutch-white: #eee3c1ff;
+}
+
+
+div.nav {
+    width: 100vw;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    position: sticky;
+}
+
+a.nav-item {
+    color: rgb(209, 52, 47);
+    font-family: 'Abel', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    margin: 15px;
+
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--dutch-white);
+    text-decoration-thickness: 2px;
+}
