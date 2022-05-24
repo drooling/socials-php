@@ -15,11 +15,15 @@ $provider = "Provider: " . $parser->isp;
         <title>surt@localhost:~# ifconfig</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href="../css/nav.css" rel="stylesheet" />
         <link href="../css/ifconfig.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
     </head>
     <body>
+		<div class="nav">
+			<a class="nav-item" href="./ifconfig/index.html">ifconfig</a>
+		</div>
         <div class="center-container">
             <div>
                 <div class="address">
