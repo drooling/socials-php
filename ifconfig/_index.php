@@ -22,7 +22,9 @@ $provider = "Provider: " . $parser->isp;
     </head>
     <body>
 		<div class="nav">
-			<a class="nav-item" href="./ifconfig/index.html">ifconfig</a>
+			<a class="nav-item" href="../index.html">ifconfig</a>
+			<a class="nav-item" href="../resolve/index.php">MD5 Resolver</a>
+			<a class="nav-item" href="../numlookup/index.html">Number Lookup</a>
 		</div>
         <div class="center-container">
             <div>

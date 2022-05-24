@@ -44,6 +44,22 @@ button[type=submit] {
     width: 50%;
 }
 
+div.result-table {
+    overflow-x: auto;
+}
+
+th {
+    text-align: center;
+    color: var(--dutch-white);
+    border-bottom: 1px solid var(--dutch-white);
+}
+
+td {
+    text-align: center;
+    color: var(--persian-red);
+    width: 10vw;
+}
+
 h2.success {
     color: lime;
     margin-bottom: 2vh;

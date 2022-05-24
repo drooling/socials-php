@@ -25,7 +25,8 @@
 		</div>
 		<div class="nav">
 			<a class="nav-item" href="./ifconfig/index.html">ifconfig</a>
-			<a class="nav-item" href="#">MD5 Resolver</a>
+			<a class="nav-item" href="./resolve/index.php">MD5 Resolver</a>
+			<a class="nav-item" href="./numlookup/index.php">Number Lookup</a>
 		</div>
 		<div class="center_container">
 			<div class="social_container">
@@ -52,7 +53,7 @@
 		</audio>
 		<script type="text/javascript">
 			$(document).ready(function (){
-				document.body.style.backgroundImage = `url("./assets/background${Math.ceil(Math.random() * 4)}.jpg")`;
+				document.body.style.backgroundImage = `url("./assets/background${Math.ceil(Math.random() * 2)}.jpg")`;
 				$('#force-interaction').click(function (){  
 					document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
 					document.getElementById("force-interaction").style.animation ="fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
