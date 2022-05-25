@@ -13,7 +13,7 @@ include 'numlookup.php';
     <body>
 		<div class="nav">
 			<a class="nav-item" href="../index.html">Home</a>
-			<a class="nav-item" href="../ifconfig/index.html">ifconfig</a>
+			<a class="nav-item" href="../ifconfig/index.php">ifconfig</a>
 			<a class="nav-item" href="../resolve/index.php">MD5 Resolver</a>
 		</div>
         <div class="center-container">
