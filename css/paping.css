@@ -25,7 +25,7 @@ div.input-form {
     padding: 15vh 15vw;
 }
 
-input[type=text] {
+input {
     background-color: transparent;
     color: var(--persian-red);
     border: 1px solid var(--dutch-white);
@@ -60,12 +60,12 @@ td {
     width: 10vw;
 }
 
-h2.success {
+.success {
     color: lime;
     margin-bottom: 2vh;
 }
 
-h2.err {
+.err {
     color: red;
     margin-bottom: 2vh;
 }

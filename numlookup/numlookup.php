@@ -22,4 +22,29 @@ function lookup() {
 	restore_error_handler();
 
 }
+
+function tcp_ping($host, $port) {
+	$responses = array();
+	$err = "<p class='err'>Connection timed out</p>";
+
+	for ($i = 0; $i < 5; $i++) {
+    	$starttime = microtime(true);
+    	$socket    = fsockopen($host, $port, $errno, $errstr, 10);
+    	$stoptime  = microtime(true);
+    	$ttl       = 0;
+
+    	if (!$socket) { 
+			array_push($responses, $err);
+		}
+    	else {
+        	fclose($socket);
+        	$ttl = ($stoptime - $starttime) * 1000;
+			$ttl = number_format((float)$ttl, 2, '.', '');
+			$success = "<p class='success'>Connected to $host: time=$ttl ms protocol=TCP port=$port</p>";
+			array_push($responses, $success);
+    	}
+	}
+
+	return join("", $responses);
+}
 ?>

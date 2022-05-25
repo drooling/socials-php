@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 :root {
     --rich-black: #0a0a0aff;
     --persian-red: #d1342fff;
     --dutch-white: #eee3c1ff;
-}
-
-* {
-    font-family: 'Inconsolata', monospace;
 }
 
 body {
