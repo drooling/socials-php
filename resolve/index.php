@@ -13,7 +13,7 @@ include 'resolve.php';
     <body>
 		<div class="nav">
 			<a class="nav-item" href="../index.html">Home</a>
-			<a class="nav-item" href="../ifconfig/index.html">ifconfig</a>
+			<a class="nav-item" href="../ifconfig/index.php">ifconfig</a>
 			<a class="nav-item" href="../numlookup/index.php">Number Lookup</a>
 		</div>
         <div class="center-container">
