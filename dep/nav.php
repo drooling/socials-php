@@ -18,7 +18,7 @@ $pages = array(
             if ($entry != $current) {
                 if (array_key_exists(strval($entry), $pages)) {
                     $title = $pages[strval($entry)];
-                    echo "<a class='nav-item' href='../{$entry}/index.php'>{$title}</a>";
+                    echo "<a class='nav-item' href='../{$entry}/index.php'>{$title}</a>\n";
                 }
             }
         }
