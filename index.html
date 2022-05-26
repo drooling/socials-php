@@ -9,7 +9,7 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="surt@localhost:~# whoami" />
 		<meta property="og:description" content="hey lol" />
-		<link href="./css/index.css" rel="stylesheet" />
+		<link href="./css/index.php" rel="stylesheet" />
 		<link href="./css/nav.css" rel="stylesheet" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	</head>
@@ -24,7 +24,7 @@
 			<h3>Click here to enter ;)</h3>
 		</div>
 		<div class="nav">
-			<a class="nav-item" href="./ifconfig/index.php">ifconfig</a>
+			<a class="nav-item" href="./ifconfig/index.html">ifconfig</a>
 			<a class="nav-item" href="./resolve/index.php">MD5 Resolver</a>
 			<a class="nav-item" href="./numlookup/index.php">Number Lookup</a>
 			<a class="nav-item" href="./paping/index.php">TCP Ping</a>
@@ -54,7 +54,6 @@
 		</audio>
 		<script type="text/javascript">
 			$(document).ready(function (){
-				document.body.style.backgroundImage = `url("./assets/background${Math.ceil(Math.random() * 2)}.jpg")`;
 				$('#force-interaction').click(function (){  
 					document.getElementById("force-interaction").removeChild(document.getElementById("force-interaction").children[0]); // Remove "Click here to enter ;)" before fade
 					document.getElementById("force-interaction").style.animation ="fadeout 1.5s normal forwards ease"; // Set animation CSS to fade interaction forcer
