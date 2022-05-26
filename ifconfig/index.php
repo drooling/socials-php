@@ -21,11 +21,9 @@ $provider = "Provider: " . $parser->isp;
         <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
     </head>
     <body>
-		<div class="nav">
-			<a class="nav-item" href="../index.html">ifconfig</a>
-			<a class="nav-item" href="../resolve/index.php">MD5 Resolver</a>
-			<a class="nav-item" href="../numlookup/index.html">Number Lookup</a>
-		</div>
+        <?php
+            $current = 'ifconfig'; include '../dep/nav.php';
+        ?>
         <div class="center-container">
             <div>
                 <div class="address">

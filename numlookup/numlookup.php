@@ -1,10 +1,11 @@
 <?php 
 function lookup() {
 	$options = array(
-		'http'=>array(
+		'http'=> array(
 			'method'=> "GET",
-			'header'=> "User-Agent: Mozilla/5.0 (iPad; U; CPU iPad OS 5_0_1 like Mac OS X; en-us) AppleWebKit/535.1+ (KHTML like Gecko) Version/7.2.0.0 Safari/6533.18.5\r\n")
-	);
+			'header'=> "User-Agent: Mozilla/5.0 (iPad; U; CPU iPad OS 5_0_1 like Mac OS X; en-us) AppleWebKit/535.1+ (KHTML like Gecko) Version/7.2.0.0 Safari/6533.18.5\r\n"
+			)
+		);
 	$context = stream_context_create($options);
 	
 	set_error_handler(function ($severity, $message, $file, $line) {
@@ -12,39 +13,40 @@ function lookup() {
 	});
 
 	try {
-		$result = file_get_contents("https://api.telnyx.com/anonymous/v2/number_lookup/" . $_REQUEST["number"], false, $context);
+		$result = file_get_contents("https://api.telnyx.com/anonymous/v2/number_lookup/" . $_REQUEST['number'], false, $context);
 		$json = json_decode($result);
-		return "<center><h2 class='success'>Phone number lookup completed.</h2></center><br><div class='result-table'><table><tr><th>Phone Number</th><th>Country</th><th>Line Type</th><th>Carrier</th></tr><tr><td>" . $json->data->national_format . "</td><td>" . $json->data->country_code . "</td><td>" . ucfirst($json->data->carrier->type) . "</td><td>" . $json->data->carrier->name . "</td></tr></table></div>";
+
+		$number = strval($json->data->national_format);
+		$country = strval($json->data->country_code);
+		$line_type = ucfirst(strval($json->data->carrier->type));
+		$carrier = strval($json->data->carrier->name);
+
+		return "
+		<center>
+			<h2 class='success'>Phone number lookup completed.</h2>
+		</center>
+		<br>
+		<div class='result-table'>
+			<table>
+				<tr>
+					<th>Phone Number</th>
+					<th>Country</th>
+					<th>Line Type</th>
+					<th>Carrier</th>
+				</tr>
+				<tr>
+					<td>{$number}</td>
+					<td>{$country}</td>
+					<td>{$line_type}</td>
+					<td>{$carrier}</td>
+				</tr>
+			</table>
+		</div>";
 	} catch (Exception $exception){
 		return "<center><h2 class='err'>Could not complete phone number lookup, check your query.</h2></center>";
 	}
 
 	restore_error_handler();
 
-}
-
-function tcp_ping($host, $port) {
-	$responses = array();
-	$err = "<p class='err'>Connection timed out</p>";
-
-	for ($i = 0; $i < 5; $i++) {
-    	$starttime = microtime(true);
-    	$socket    = fsockopen($host, $port, $errno, $errstr, 10);
-    	$stoptime  = microtime(true);
-    	$ttl       = 0;
-
-    	if (!$socket) { 
-			array_push($responses, $err);
-		}
-    	else {
-        	fclose($socket);
-        	$ttl = ($stoptime - $starttime) * 1000;
-			$ttl = number_format((float)$ttl, 2, '.', '');
-			$success = "<p class='success'>Connected to $host: time=$ttl ms protocol=TCP port=$port</p>";
-			array_push($responses, $success);
-    	}
-	}
-
-	return join("", $responses);
 }
 ?>

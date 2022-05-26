@@ -11,12 +11,9 @@ include 'paping.php';
         <link href="../css/paping.css" rel="stylesheet">
     </head>
     <body>
-		<div class="nav">
-			<a class="nav-item" href="../index.html">Home</a>
-			<a class="nav-item" href="../ifconfig/index.html">ifconfig</a>
-			<a class="nav-item" href="../resolve/index.php">MD5 Resolver</a>
-			<a class="nav-item" href="../numlookup/index.php">Number Lookup</a>
-		</div>
+        <?php
+            $current = 'paping'; include '../dep/nav.php';
+        ?>
         <div class="center-container">
             <div>
                 <div class="input-form">

@@ -9,9 +9,15 @@ function resolve() {
 	
 	$result = file_get_contents("https://api.dehash.lt/api.php?search=" . $_REQUEST["hash"], false, $context);
 	if (strpos($result, ":") == false) {
-		return "<center><h2 class='err'>Hash not found in database.</h2></center>";
+		return "
+		<center>
+			<h2 class='err'>Hash not found in database.</h2>
+		</center>";
 	} else {
-		return "<center><h2 class='success'> - Hash Found - <br>" . htmlspecialchars($result) . "</h2></center>";
+		return "
+		<center>
+			<h2 class='success'> - Hash Found - <br>" . htmlspecialchars($result) . "</h2>
+		</center>";
 	}
 }
 ?>

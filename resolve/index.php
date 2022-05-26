@@ -11,11 +11,9 @@ include 'resolve.php';
         <link href="../css/resolve.css" rel="stylesheet">
     </head>
     <body>
-		<div class="nav">
-			<a class="nav-item" href="../index.html">Home</a>
-			<a class="nav-item" href="../ifconfig/index.html">ifconfig</a>
-			<a class="nav-item" href="../numlookup/index.php">Number Lookup</a>
-		</div>
+        <?php
+            $current = 'resolve'; include '../dep/nav.php';
+        ?>
         <div class="center-container">
             <div>
                 <div class="input-form">
